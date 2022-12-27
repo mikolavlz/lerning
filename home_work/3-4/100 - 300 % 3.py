@@ -3,5 +3,4 @@ for n in range(100 , 200):
     if n % 3 == 0:
         s =+ n
         print(n)
-        # print(f"{n}/3 = {int(n / 3)}")
 print(s)
