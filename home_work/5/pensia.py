@@ -7,5 +7,4 @@ def pens(god):
         print("Поздравляю вы на пенсии")
     else:
         print(f"До пенсии осталось {a}")
-
 pens(god)
