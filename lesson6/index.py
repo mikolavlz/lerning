@@ -86,7 +86,7 @@ office1 = create_office(" Moskow 1",10)
 office2 = create_office(" Lenin20",20)
 office3 = create_office(" Kiev 54", 15)
 company = [office1,office2,office3]
-# print(company)
+print(company)
 
 print(office1)
 def
