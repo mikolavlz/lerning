@@ -13,7 +13,7 @@ my_dict['alex'] = 'developer'
 #переопределение эл-та
 my_dict['ivan'] = 'developer'
 #удаление
-del my_dict['petr']
+del my_dict['petr']get
 #поиск эл-та по ключу
 print('alex'in my_dict)
 #для удаления элементов в словаре

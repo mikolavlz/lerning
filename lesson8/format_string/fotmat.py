@@ -1,0 +1,5 @@
+# print('dobry den,{}!'.format('ivan'))
+# print('{0}{1}{2}'.format('ivan ','ivanovith ','Ivanov '))
+# print('{first}{last}'.format(first='ivan ',last='ivanovith '))
+(surname,name,second_name) = input().split(' ')
+print('familia: {}'.format(surname)+)
