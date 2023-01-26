@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<store>
+	<book>
+		<author>ivanov</author>
+		<title>book1</title>
+	</book>
+	<book>
+		<author>petrov</author>
+		<title>book2</title>
+	</book>
+</store>
