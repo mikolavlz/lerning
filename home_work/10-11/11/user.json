@@ -1,0 +1,22 @@
+
+        {"user": [
+    {
+      "username": "max",
+      "pass": "32456245"
+    },
+    {
+      "username": "alex",
+      "pass": "467456"
+    },
+    {
+      "username": "ivan",
+      "pass": "67456"
+    },
+    {
+      "username": "petr",
+      "pass": "34567"
+    }
+
+  ]
+}
+        
