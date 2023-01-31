@@ -1,5 +1,4 @@
 import json
-
 with open('user.json', 'w') as file:
         file.write('''
         {"user": [
