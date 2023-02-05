@@ -21,6 +21,7 @@ class Office:
         # print(f"Сотрудник {man_min.fio} имеет минимальный оклад {man_min.salary}")
         for l in range(len(man60k)):
             print(f"Сотрудники {man60k[l].fio} имеет оклад более 60000 = {man60k[l].salary}")
+        print(f'\nСредняя зарплата в оффисе = {self.get_avg_sallary()}')
 
     # Получаем сотрудника с макс. окладом
     def get_man_max_salary(self):
@@ -41,11 +42,18 @@ class Office:
     def get_salary_above_60k(self):
         man60k = []
         print("\n")
-        for i in range(1,
-            len(self.persons)):  # обошли всех сотрудников, начиная со 1го и сравнили каждого с 60000
+        for i in range(1, len(self.persons)):  # обошли всех сотрудников, начиная со 1го и сравнили каждого с 60000
             if self.persons[i].salary > 60000:
                 man60k.append(self.persons[i])
         return man60k
+    def get_avg_sallary(self):
+        avg = 0
+        for i in range(1, len(self.persons)):
+            avg += self.persons[i].salary
+        avg = avg / len(self.persons)
+        return avg
+
+
 
 
 
