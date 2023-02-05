@@ -1,3 +1,22 @@
+# не смог список кортежей преобразовать в обьекты - студенты , требуся разьяснения.
+
+import pymysql.cursors
+from pymysql import *
+
+connect = connect(host='localhost',user='root',password='',db='Lesson12',cursorclass=pymysql.cursors.DictCursor)
+with connect:
+   cur =  connect.cursor()
+   cur.execute('select * from student')
+   stud_db = cur.fetchall()
+   # print(rows)
+   man = []
+   for item in stud_db:
+        print(f'У студента {item["name"]} средний бал =  {item["ball"]}')
+        turtle_temp = (item["id"] ,item["name"] ,item["ball"])
+        print(turtle_temp)
+        man.append(turtle_temp)
+
+   print(man)
 
 class univer:
     def __init__(self,title,student):
@@ -29,18 +48,17 @@ class student:
     def get_info(self):#self ссылается на объект, который вызывает наш метод
         return f"Студент {self.fio} имеет средний балл {self.ball}"
 
+# man1 = student(1,"Иванов",3.5)
+# man2 = student(2,"Петров",4.7)
+# man3 = student(3,"Сидоров",4.6)
+# man4 = student(4,"Егоров",2.6)
+# man5 = student(5,"Петросян",5)
+# man6 = student(6,"Курянов",4.8)
+# man7 = student(7,"Жлобов",2.7)
+# man8 = student(8,"Котов",3.7)
 
-man1 = student(1,"Иванов",3.5)
-man2 = student(2,"Петров",4.7)
-man3 = student(3,"Сидоров",4.6)
-man4 = student(4,"Егоров",2.6)
-man5 = student(5,"Петросян",5)
-man6 = student(6,"Курянов",4.8)
-man7 = student(7,"Жлобов",2.7)
-man8 = student(8,"Котов",3.7)
 
-
-men = [man1,man2,man3,man4,man5,man6,man7,man8]
-university = univer("МГУ",men)
+# men = [man1,man2,man3,man4,man5,man6,man7,man8]
+university = univer("МГУ",man)
 university.show_info() #выведем всю информацию об студентах
 
