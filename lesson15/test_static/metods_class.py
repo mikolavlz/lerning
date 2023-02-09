@@ -15,6 +15,7 @@ class MyClass:
 
     @staticmethod
     def my_static():
+        MyClass().usualy()
         print("Static metod")
 
     @classmethod
