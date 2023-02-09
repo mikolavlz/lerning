@@ -14,7 +14,7 @@ with connect:
         print(f'У студента {item["name"]} средний бал =  {item["ball"]}')
         turtle_temp = (item["id"] ,item["name"] ,item["ball"])
         print(turtle_temp)
-        man.append(turtle_temp)
+        man.append(tu rtle_temp)
 
    print(man)
 
