@@ -1,8 +1,8 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 
 class Good(ABC):
-    profit = 30#это процент прибыли
-    def __init__(self,quantity):
+    profit = 30  #это процент прибыли
+    def __init__(self, quantity):
         self.quantity = quantity
 
     #Метод для получения чистой прибыли
@@ -12,3 +12,4 @@ class Good(ABC):
     @abstractmethod
     def get_final_price(self):
         pass
+    
