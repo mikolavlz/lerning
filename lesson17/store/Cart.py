@@ -1,4 +1,5 @@
 from GoodCart import GoodCart
+from Category import Category
 
 
 class Cart:
@@ -14,7 +15,9 @@ class Cart:
 
 #В методе принимаем товар из каталога для покупки
 #good - это товар каталога
-    def add_good(self,good,user_id):
+    def add_good(self, good, user_id):
+        self.user_id = user_id
+        print(user_id)
         if(len(self.goods_cart) == 0):#если в корзине нет
             self.add_good_first_time(good,user_id)
         else: #если в корзине товары уже были
@@ -27,8 +30,13 @@ class Cart:
             if not is_find: #товар добавляется впервые
                 self.add_good_first_time(good,user_id)
 
-    def add_good_first_time(self,good,user_id):
-        cart_item = GoodCart(good.id, good.title, good.price, good.category, 1,user_id)
+    def add_good_first_time(self, good, user_id):
+        # self.user_id = user_id
+        print(good)
+        print(user_id)
+        print(good.category.title)
+        print(good.id, good.title, good.price, good.category.title, 1, user_id)
+        cart_item = GoodCart(good.id, good.title, good.price, good.category.title, 1)
         self.goods_cart.append(cart_item)
 
 
