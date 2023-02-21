@@ -11,8 +11,7 @@ subscriber1 = Subscriber('User1',["Java","JS","Puthon"])
 subscriber2 = Subscriber('User2',["Java","JS","Puthon"])
 subscriber3 = Subscriber('User3',["Java","JS","Puthon"])
 
-my_channel = YouTubeChannel("Языки",[subscriber1,subscriber2,subscriber3])
+my_channel = YouTubeChannel("Языки",[subscriber1,subscriber2,subscriber3],movies)
 
 new_subscriber = Subscriber("Oler",["Java","JS"])
-my_channel.subscriber(new_subscriber)
-new
+my_channel.unsubscribe(my_channel.subscribers[0])

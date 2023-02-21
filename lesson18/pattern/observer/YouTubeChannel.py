@@ -19,4 +19,4 @@ class YouTubeChannel:
         self.movies.append(movie)
         for item in self.subscribers:
             item.update(self.title,movie.title)
-        print("Список доступных роликов ", )
+        print("Список доступных роликов ",self.show_content() )
