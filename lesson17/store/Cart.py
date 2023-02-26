@@ -17,10 +17,12 @@ class Cart:
 #good - это товар каталога
     def add_good(self, good, user_id):
         self.user_id = user_id
-        print(user_id)
+        print(f'add_good, user id {user_id}')
         if(len(self.goods_cart) == 0):#если в корзине нет
+            print('#если в корзине нет')
             self.add_good_first_time(good,user_id)
         else: #если в корзине товары уже были
+            print('#если в корзине товары уже были')
             is_find = False#пусть товар добавляется впервые
             for item in self.goods_cart: #цикл по существующим в корзине товарам
                 if item.id == good.id:#товар найден
@@ -31,6 +33,7 @@ class Cart:
                 self.add_good_first_time(good,user_id)
 
     def add_good_first_time(self, good, user_id):
+        print(f'add_good_first_time(self, good{good}, user_id{user_id}):')
         # self.user_id = user_id
         print(good)
         print(user_id)
