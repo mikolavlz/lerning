@@ -28,3 +28,5 @@ class Parcer:
             raise RuntimeError('Невозможно определит ьформат файла')
 
         obj = parcer.parce(filename)
+
+Parcer.open('pars.json')
