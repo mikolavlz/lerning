@@ -12,9 +12,8 @@ while True:
             answer = s.recv(1000000000)
             print(answer.decode('UTF-8'))
     else:
-        print('Внимательно следите за тем что вводите')
-
+        print('Внимательно следите за тем что вводиш')
 s.send(msg.encode('UTF-8'))
 answer = s.recv(1000000000)
-print('Сообщение от сервера: ',answer.decode('UTF-8'))
+print('Сообщение от серве,answer.decode('UTF-8'))
 s.close()
