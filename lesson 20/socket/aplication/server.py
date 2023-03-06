@@ -5,7 +5,7 @@ def kurs(valuta):
     with urlopen('https://www.cbr-xml-daily.ru/daily_json.js') as response:
         sourse = response.read()
     data = json.loads(sourse)
-    return (f'Курс {valuta} сегодня: {format((data["Valute"][valuta]["Value"]))}')
+    return (f'Курс {valuta} сегодня: {format((data["Valute"][valuta]["Value"]))}\n')
 
 # AF_INET -указываем что сокет сетевым
 # SOCK_STREAM - определяет сокет как потоквый
@@ -13,9 +13,9 @@ def kurs(valuta):
 s = socket(AF_INET,SOCK_STREAM) #создали сокет
 s.bind(('',8008))       #настроили сокет по локальному адресу и ипи
 s.listen(5) #ожидаем запросы и указываем количество одновременных запросов
+client,adrr = s.accept()
 while True:
-    client,adrr = s.accept()
-    msg = ("Ты подключился к валютному чат боту\nможешь выбрать какой курс тебе показать\n1.EUR\n2.USD\n3.JPY\nВведи 1, 2, 3 или q")
+    msg = ("Ты подключился к валютному чат боту\nМожешь выбрать какой курс тебе показать\n1.EUR\n2.USD\n3.JPY\nВведи 1, 2, 3 или q")
     client.send(msg.encode('utf-8'))
     data = client.recv(10000000) # получаем данные от клиента
     data1 = data.decode('utf-8')
@@ -25,7 +25,10 @@ while True:
         key_valuta = 'USD'
     elif data1 == '3':
         key_valuta = 'JPY'
+    elif data == 'q':
+        client.close()
+        break
     msg = kurs(key_valuta)
-    print('Сообщение',data.decode('utf-8'),'было отправленно',adrr)
+    print('Сообщение',msg,'было отправленно',adrr)
     client.send(msg.encode('utf-8'))
-    client.close()
+
