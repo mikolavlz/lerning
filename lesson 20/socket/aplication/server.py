@@ -1,3 +1,4 @@
+#на вычисление маметаических операций нехватило времени , потратил слишком много времени на курсы валют .
 import json
 from socket import *
 from urllib.request import urlopen

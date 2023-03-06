@@ -1,3 +1,4 @@
+#на вычисление маметаических операций нехватило времени , потратил слишком много времени на курсы валют .
 from socket import *
 
 s = socket(AF_INET,SOCK_STREAM) #создали сокет
@@ -9,7 +10,7 @@ while True:
     if msg == "1" or msg == "2" or msg == "3" or msg == 'q':
         if msg == 'q':
             s.send(msg.encode('UTF-8'))
-            s.close()/
+            s.close()
             break
         else:
             s.send(msg.encode('UTF-8'))
