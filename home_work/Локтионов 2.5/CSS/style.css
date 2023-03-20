@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(213, 219, 219);
+}
+#p01 {
+    color: rgb(226, 23, 91);
+    text-align:center;
+}
+#p02 {
+    color: green;
+    text-align:justify;
+}
+#p03 {
+    color: blue;
+    text-align:justify;
+}
