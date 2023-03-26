@@ -9,7 +9,7 @@ with open('user.json', 'w') as file:
     {
       "username": "alex",
       "pass": "467456"
-    },
+    },max
     {
       "username": "ivan",
       "pass": "67456"
