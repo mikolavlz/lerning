@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>change picture</title>
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === 2) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+            document.getElementById("img1").src = images[x+3];
+            document.getElementById("img2").src = images[x+6];
+
+        }
+        
+
+
+        function startTimer() {
+            setInterval(displayNextImage, 1000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "image1.jpg";
+        images[1] = "image2.jpg";
+        images[2] = "image3.jpg";
+        images[3] = "image4.jpg";
+        images[4] = "image5.jpg";
+        images[5] = "image6.jpg";
+        images[6] = "image7.jpg";
+        images[7] = "image8.jpg";
+        images[8] = "image9.jpg";
+    </script>
+</head>
+<body onload = "startTimer()">
+    <table style="border-collapse: collapse; width: 100%;" border="1">
+        <tbody>
+        <tr style="height: 482px;">
+        <td style="width: 33.3333%; text-align: center;"><img id="img" src="image2.jpg"/></td>
+        <td style="width: 33.3333%; text-align: center;"><img id="img1" src="image5.jpg"/></td>
+        <td style="width: 33.3333%; text-align: center;"><img id="img2" src="image8.jpg"/></td>
+        </tr>
+        </tbody>
+        </table>
+</body>
+</html>
+
