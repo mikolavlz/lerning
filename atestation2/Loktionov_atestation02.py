@@ -1,3 +1,4 @@
+#версия  сырая , постораюсь успеть доделать к сроку
 import re
 import json
 def add_user():
@@ -57,7 +58,7 @@ def edit_pass():
                 newpass = input('Введите новый пароль')
                 userid['pass'] = newpass
                 data_w = json.dumps(data)
-                print(data_w)
+                # print(data_w)
                 break
             # with open('user.json', 'w') as file:
             #     file.write(data_w)
@@ -67,11 +68,11 @@ def edit_pass():
 
 
 inp = input('1 - добавить пользователя\n2-изменить пароль\n3 - вывести список пользователей\n4 - выход')
-if inp == 1:
+if inp == '1':
     add_user()
-elif inp == 2:
+elif inp == '2':
     edit_pass()
-elif inp == 3:
+elif inp == '3':
     print_user()
 else:
     print('Bye!')
