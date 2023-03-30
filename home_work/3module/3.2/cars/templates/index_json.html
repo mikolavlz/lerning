@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function getModels(markId){
+            $.ajax({
+                type:'POST',
+                url:'/',
+                data: 'id=' + markId, //подготовили строку запроса для сервера на основе введенных данных в форму
+                success: function(answer){
+                    obj = JSON.parse(answer);//преобразовали JSON от сервера в объект JS
+                    str = "";
+                    for(let item of obj){
+                        str += `<option>${item.title}</option>`
+                    }
+                    $('#models').html(str);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <select onchange="getModels(value)">
+        {% for item in marks %}
+        <option value="{{ item.id }}">{{ item.marka}}</option>
+        {% endfor %}
+    </select>
+    <select id="models"></select>
+</body>
+</html>
