@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    function addTextToInput(anElement) {
+      var text = document.getElementById('calc').value;
+<!--      if (text != "")-->
+<!--        text += ",";-->
+      text += anElement.innerText;
+      document.getElementById('calc').value = text;
+    }
+     function send(){
+            $.ajax({
+                type:'POST',
+                url:'/ajax',
+                data: $('form').serialize(), //подготовили строку запроса для сервера на основе введенных данных в форму
+                success: function(answer){
+                    $('h1').html(answer);
+                }
+            })
+        }
+    </script>
+</head>
+
+<body>
+<h1></h1>
+<form action="/calc" method="post">
+<input name="calc" id="calc" />
+<br/>
+<button type="button" onclick="addTextToInput(this)">1</button>
+<button type="button" onclick="addTextToInput(this)">2</button>
+<button type="button" onclick="addTextToInput(this)">3</button>
+<button type="button" onclick="addTextToInput(this)">+</button>
+<br>
+<button type="button" onclick="addTextToInput(this)">4</button>
+<button type="button" onclick="addTextToInput(this)">5</button>
+<button type="button" onclick="addTextToInput(this)">6</button>
+<button type="button" onclick="addTextToInput(this)">-</button>
+<br>
+<button type="button" onclick="addTextToInput(this)">7</button>
+<button type="button" onclick="addTextToInput(this)">8</button>
+<button type="button" onclick="addTextToInput(this)">9</button>
+<button type="button" onclick="addTextToInput(this)">/</button>
+<br>
+<button type="button" onclick="addTextToInput(this)">*</button>
+<button type="button" onclick="send()">=</button>
+</form>
+</body>
+
+</html>
