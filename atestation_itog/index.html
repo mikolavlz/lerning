@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="calci_form" method="get" action="#">
+        <input type="hidden" name="prev_val" value="{{prev_val}}"></input>
+        <input type="hidden" name="curr_val" value="{{curr_val}}"></input>
+        <input type="hidden" name="op_sign" value="{{opsign}}"></input>
+        <div id="calculator">
+        <table id="tableCalci">
+        <tr  id="row1">
+        <td colspan="4"><input type="text" value="0" class="display" name="user_input">{{result}}</input></td>
+       </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+       <tr class="hover">
+       <td><button id="7" name="numval" value="7" type="submit">7</button></td>
+       <td><button id="8" name="numval" value="8" type="submit">8</button></td>
+       <td><button id="9" name="numval" value="9" type="submit">9</button></td>
+       <td><button id="plus" name="sym" type="submit" value="add">+</button>
+       </td>
+       </tr>
+       <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+       </tr>
+        <tr class="hover">
+       <td><button id="4" name="numval" value="4" type="submit">4</button></td>
+       <td><button id="5" name="numval" value="5" type="submit">5</button></td>
+       <td><button id="6" name="numval" value="6" type="submit">6</button></td>
+       <td><button id="minus" name="sym" value="minus" type="submit">-</button></td>
+       </tr>
+       <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+       </tr>
+        <tr class="hover">
+        <td><button id="1" name="numval" value="1" type="submit">1</button></td>
+        <td><button id="2" name="numval" value="2" type="submit">2</button></td>
+        <td><button id="3" name="numval" value="3" type="submit">3</button></td>
+        <td><button id="times" name="sym" value="times" type="submit">*</button></td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+        <tr class="hover">
+        <td>&nbsp;</td>
+        <td><button id="0" name="numval" value="0" type="submit">0</button></td>
+        <td>&nbsp;</td>
+       <td><button id="divide"; name="sym" type="submit" value="divide">/</button></td>
+        <td><button id="equal" name="sym" type="submit">=</button></td>
+
+        </tr>
+        </table>
+        </div>
+       </form>
+</body>
+</html>
