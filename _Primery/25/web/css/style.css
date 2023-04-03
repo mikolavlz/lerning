@@ -1,0 +1,13 @@
+h2{
+    color: red;
+}
+
+#first{
+    font-size: 30px;/*размер шрифта*/
+    text-decoration: underline;/*подчеркивание*/
+    color: green;
+}
+
+.even{
+    color: blue;
+}

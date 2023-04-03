@@ -1,0 +1,14 @@
+<script>
+    
+    window.onload = function(){
+       let color = "red";//установили начальный цвет
+        header = document.querySelector("h1");
+        setInterval(()=>{
+            color = color == "red" ? "blue" : "red";
+            header.style.color = color;
+        },1000);//по таймеру раз в секунду вызываем функцию f
+    }
+   
+</script>
+
+<h1>Моргающий заголовок</h1>

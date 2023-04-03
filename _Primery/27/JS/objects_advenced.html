@@ -1,0 +1,19 @@
+<script>
+    // this - это ссылка на объект, который вызывает функцию конструктор
+    function Car(title,price){
+        this.title = title;
+        this.price = price;
+        this.showInfo = function(){
+            console.log(`${this.title} стоит ${this.price}`);
+        }
+    }
+
+    let car1 = new Car("BMW",1200);// new Car - запускает функцию конструктор
+    let car2 = new Car("Audi",1100);
+    let car3 = new Car("VW",900);
+
+    let cars = [car1,car2,car3];
+    for(let item of cars){
+        item.showInfo();
+    }
+</script>

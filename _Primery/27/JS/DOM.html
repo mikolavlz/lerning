@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x{
+            text-decoration: underline;
+        }
+
+        .test{
+            text-decoration: line-through;
+        }
+    </style>
+
+    <script>
+        function getRandomColor(){
+            let r = parseInt(Math.random() * 255);
+            let g = parseInt(Math.random() * 255);
+            let b = parseInt(Math.random() * 255);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        // let header = document.getElementById('x');
+        // let header = document.querySelector('h1');//querySelector - вернет первый найденный элемент в вертске
+        // header.innerHTML = "<span>Новый header</span>";
+        // header.style.color = 'blue';
+        // header.classList.add('x');
+
+
+        window.onload = function(){
+            let headers = document.querySelectorAll('h2');//получили коллекцию объектов с тэгом h2
+            for(let i = 0,size=10;i < headers.length;i++,size+=10){
+                headers[i].style.color = getRandomColor();
+                headers[i].style.fontSize = size + "px";
+                headers[i].onclick = function(){
+                    this.style.color = 'gray';//this - это источник события, то есть элемент на который нажали
+                    this.classList.add('test');
+                }
+            } 
+
+            let link = document.createElement("a");//<a></a>
+            link.href = 'https://yandex.ru';
+            link.innerText = "Перейти в поисковик";
+            document.querySelector("div").append(link);
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div></div>
+
+    <h2>1 заголовок</h2>
+    <h2>2 заголовок</h2>
+    <h2>3 заголовок</h2>
+    <h2>4 заголовок</h2>
+    <h2>5 заголовок</h2>
+    <h2>6 заголовок</h2>
+
+
+    <!-- <h1 id="x">Тестовый заголовок</h1> -->
+
+</body>
+</html>

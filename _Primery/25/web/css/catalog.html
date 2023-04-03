@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .new{
+            color: greenyellow;
+            font-size: 30px;
+            font-weight: bold;/*жирный шрифт*/
+            font-style: italic; /*курсив*/
+        }
+        .old{
+            color: gray;
+            font-size: 20px;
+            text-decoration: line-through;
+        }
+        table{
+            margin: 0 auto;
+            width: 500px;
+            height: 400px;
+        }
+        td,th{
+            border: 1px solid red;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+
+        a:hover{
+            color:red;
+            font-size: 30px;
+        }
+        a:visited{
+            color:gray;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://yandex.ru"><img src="https://r.mradx.net/pictures/E6/51F84B.jpg" alt=""></a>
+    <h1>Тестовый заголовок для для демонстрации <span style="color:red">тэга span</span></h1>
+    <table>
+        <tr>
+            <th>Номер товара</th>
+            <th style="padding-left:10px;">Название товара</th>
+            <th>Стоимость товара</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ауди</td>
+            <td>
+                <span class="old">1100</span>
+                <span class="new">1000</span>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>БМВ</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>VW</td>
+            <td>
+                <span class="old">1200</span>
+                <span class="new">900</span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

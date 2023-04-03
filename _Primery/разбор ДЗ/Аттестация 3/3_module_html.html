@@ -1,0 +1,9 @@
+<script>
+    fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+        .then(text => text.json())
+        .then(obj => {
+            usd = obj.Valute.USD.Value;
+            euro = obj.Valute.EUR.Value;
+            console.log(`Курс USD: ${usd}; Курс EUR: ${euro}; USD/EUR : ${usd/euro};`);
+        })
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Магазин снежинок</title>
+    <script>
+        window.onload = function(){
+            let images = "";
+                for (let i = 1; i <= 9; i++){
+                    images += `<div class="div-goods">
+                        <img class="img-goods" src="images/snowflake${i}.png" alt="">
+                        <p>Снежинка ${i}</p>
+                        </div>`;
+                }
+                document.querySelector("#x").innerHTML = images;  
+        }
+                
+          </script>
+</head>
+<body> 
+    <header>
+        <div id="enter">
+            <p>Войти</p>
+        </div>
+        <div id="box-head">
+            <img id="logo" src="images/logo.png" alt="">
+            <input id="search-area" type="text" placeholder="Поиск по магазину">
+        </div>
+        <div id="basket">
+            <img src="images/basket.png" alt="">
+        </div>
+    </header>
+    <div id="content">
+        <div id="menu">
+            <div class="menu-item">
+                <a href="#">Фотографии снежинок</a>
+            </div>
+            <div class="menu-item">
+                <a href="#">Нарисованные снежинки</a>
+            </div>
+            <div class="menu-item">
+                <a href="#">3D-снежинки</a>
+            </div>
+            <div class="menu-item">
+                <a href="#">Оригами-снежинки</a>
+            </div>
+        </div>
+        <div class="AD">
+            <h1 style="text-align: center; color: darkblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Мы подобрали товары для Вас
+            </h1>
+        </div>
+        <div id="x" class="AD">
+            
+        </div>
+    </div>
+</body>
+</html>

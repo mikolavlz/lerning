@@ -1,0 +1,9 @@
+<script>
+
+    let headers = "";
+    let colors = ["red","green","blue"];
+    for(let i = 1,size=20;i <= 10;i++,size += 5){
+        headers += `<h1 style="font-size:${size}px;color:${colors[parseInt(Math.random() * colors.length)]}">Элемент №${i}</h1>`
+    }
+    document.write(headers);
+</script>

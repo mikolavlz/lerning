@@ -1,0 +1,35 @@
+<script>
+    let car = {
+        title:"Audi",
+        price:1000,
+        isStarted:false,
+        show: function(){
+            console.log(`${this.title} стоит ${this.price}`);
+        }
+    }
+
+    car.show();
+
+    let car2 = {
+        title:"BMW",
+        price:1200,
+        isStarted:false
+    }
+
+    car.color = "white";
+
+    car.start = on;
+    car2.start = on;
+
+    function on(a,b){
+        alert(a);
+        if(!this.isStarted){
+            this.isStarted = true;
+            console.log(this.title + " заведена!");
+        }
+    }
+
+    car.start(1,2);
+    // car2.start();
+    // console.log(car);
+</script>

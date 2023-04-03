@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример обработки формы через AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function send(){
+            let n1 = $("#n1").val();//document.querySelector('#n1').value
+            let n2 = $("#n2").val();
+            let str = "n1=" + n1 + "&n2=" + n2;//подготовили строку запроса
+            $.ajax({
+                type:'POST',
+                url:'/ajax',
+                data: str, //подготовили строку запроса для сервера на основе введенных данных в форму
+                success: function(answer){
+                    $('h1').html(answer);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <p>Введите первое число</p>
+    <input type="text" id="n1">
+    <p>Введите второе число</p>
+    <input type="text" id="n2"><br><br>
+    <input type="button" onclick="send()" value="Суммировать">
+
+</body>
+</html>

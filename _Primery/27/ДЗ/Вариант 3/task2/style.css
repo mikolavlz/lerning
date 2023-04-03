@@ -1,0 +1,16 @@
+body{
+    text-align: justify;
+}
+
+#first{
+    color: green;
+}
+
+#second{
+    color: blue;
+}
+
+.avtor{
+    text-align: right;
+    font-style: italic;
+}

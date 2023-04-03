@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример обработки формы через AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function send(){
+            $.ajax({
+                type:'POST',
+                url:'/ajax',
+                data: $('form').serialize(), //подготовили строку запроса для сервера на основе введенных данных в форму
+                success: function(answer){
+                    $('h1').html(answer);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <form action="/calc" method="post">
+        <p>Введите первое число</p>
+        <input type="text" name="n1">
+        <p>Введите второе число</p>
+        <input type="text" name="n2"><br><br>
+         <select name="operation">
+          <option value="add">Сложить</option>
+          <option value="subtract">Вычесть</option>
+          <option value="multiply">Умножить</option>
+          <option value="divide">Делить</option>
+        </select>
+        <input type="button" onclick="send()" value="calc">
+    </form>
+</body>
+</html>

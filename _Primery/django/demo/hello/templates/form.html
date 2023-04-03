@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Шаблон...</title>
+</head>
+<body>
+    <h1>Работа с формой</h1>
+
+    <form method="post" action="action_form/">
+        {% csrf_token  %}
+        <p>Имя:</p>
+        <input type="text" name="name">
+        <p>Возраст:</p>
+        <input type="text" name="age"><br><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

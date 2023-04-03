@@ -1,0 +1,377 @@
+body{
+    background-color: antiquewhite;
+    color: darkblue;
+    font-family: Arial, Times New Roman, Verdana;
+    font-size: 16px;
+}
+ 
+/* Контейнер */
+#container{
+    background-color: black;
+    width: 1600px;
+    height: 1600px;
+    margin: 40px auto;
+}
+
+/* Шапка */
+#header{
+    background-color: slategrey;
+    width: 100%;
+    height: 75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    float: left;
+}
+
+/* Блок для текущих акций */
+#promo{
+    background-color: darkolivegreen;
+    width: 100%;
+    height: 250px;
+    float: left;
+}
+
+/* Блок для навигации */
+#nav{
+    background-color: slategrey;
+    width: 100%;
+    height: 75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    float: left;
+}
+
+/* Блок левый */
+#left{
+    background-color: darkolivegreen;
+    width: 350px;
+    height: 1050px;
+    float: left;
+}
+
+/* Блок каталог */
+#katalog{
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-left: 35px;
+    margin-left: 15px;
+    margin-top: 35px;
+    background-color: white;
+    width: 325px;
+    height: 865px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    line-height: 50px;
+}
+
+/* Блок "Популярные товары" */
+#content{
+    background-color: darkolivegreen;
+    width: 1250px;
+    height: 1050px;
+    float: right;
+}
+
+/* Блок "Товар 1" */
+#good1{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 35px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 1" */
+#good2{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 315px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 2" */
+#good3{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 625px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 3" */
+#good4{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 935px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 4" */
+#good5{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 5" */
+#good6{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 315px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 6" */
+#good7{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 625px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 7" */
+#good8{
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 935px;
+    margin-top: -425px;
+    background-color: white;
+    width: 300px;
+    height: 425px;
+}
+
+/* Блок "Товар 8" */
+#footer{
+    background-color: slategrey;
+    width: 100%;
+    height: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    float: left;  
+}
+
+.clear{
+    clear: both;
+}
+
+.info{
+    color: white;
+    line-height: 35px;
+}
+
+.jump{
+    color: white;
+}
+
+.goods{
+
+    color: black;
+}
+
+.good{
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.good_name{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;  
+    left: 10px;
+    top: 15px;
+}
+
+.price{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    left: 10px;
+    top: 30px;
+}
+
+.sale_price{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+    left: 10px;
+    top: 30px;
+}
+
+.old_price{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: line-through;
+    color: dimgray;
+    left: 30px;
+    top: 30px;
+}
+
+h2{
+    position: relative;
+    margin-top: -60px;
+    margin-left: 450px;
+}
+
+h3{
+    margin-left: 60px;
+    margin-right: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: rgb(22, 18, 18);
+}
+
+/* Кнопка "Название магазина" */
+#name{
+    border: 0;
+    height: 75px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    background-color: slategrey;
+}
+
+#name:before {
+    content: "\1F322  У Ручья";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Кнопка "Вход" */
+#login{
+    height: 35px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    top: -70px;
+    left: 1275px;
+    background-color: white;
+}
+
+#login:before {
+    content: "Вход";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/* Кнопка "Регистрация" */
+#reg{
+    height: 35px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    top: -70px;
+    left: 1275px;
+    background-color: white;
+}
+
+#reg:before {
+    content: "Регистрация";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/* Поле для поиска */
+#search-field{
+    border: 0;
+    height: 45px;
+    width: 700px;
+    margin-top: 15px;
+    margin-left: 350px;
+    background-color: white;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* Кнопка "Поиск" */
+#magnify{
+    border: 0;
+    height: 40px;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+    left: -75px;
+    background-color: white;
+}
+
+#magnify:before {
+    content: "\1F50D";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    color: black;   
+}
+
+/* Кнопка "Избранное" */
+#favorite{
+    border: 0;
+    height: 35px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    background-color: slategrey;
+}
+
+#favorite:before {
+    content: "\2764  Избранное";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;  
+}
+
+/* Кнопка "Корзина" */
+#cart{
+    border: 0;
+    height: 35px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    left: 25px;
+    background-color: slategrey;
+}
+
+#cart:before {
+    content: "\1F3A3  Корзина";
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: white; 
+}

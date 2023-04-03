@@ -1,0 +1,76 @@
+<script>
+    let number = [];
+    generateNumber();
+    /*
+    Проверяем каждый символ на число
+    */
+    function isNumber(str){
+        for(let i = 0;i < str.length;i++){
+            if(isNaN(+str[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function generateNumber(){
+        for(let i = 0;i < 4;i++){
+            let randomNumber = parseInt(Math.random() * 10);
+            if(i == 0){
+                number.push(randomNumber);
+            }else{
+                while(number.indexOf(randomNumber) != -1){//элемент найден и значит нужно пересчитывать
+                    randomNumber = parseInt(Math.random() * 10);
+                }
+                number.push(randomNumber);
+            }
+        }
+        alert(number);
+    }
+
+    
+    let answer = prompt("Введите ответ, либо -1 для выхода");
+
+    while(1){
+        switch(answer){
+            case -1:
+                alert("Игра завершается");
+                break;
+            default:
+                if(isNumber(answer)){
+                    let result = main(answer);//result стал массивом из 3 элементов
+                    if(result[2]){
+                        alert("Поздравляем! Вы победили");
+                        break;
+                    }else{
+                        answer = prompt(`Вы не угадали, 
+                        после предыдущей попытки быков: ${result[0]}, коров: ${result[1]}`);
+                    }
+                }
+        }
+    }
+
+
+    function main(answer){
+        // в массиве храним счетчик быков, счетчик коров и результат ответа(угадал или не угадал)
+        let mas = [0,0,false];
+        for(let i = 0;i < answer.length;i++){
+            if(answer[i] == number[i]){
+                mas[0]++;//счетчик быков увеличиваем, если и позиция и значение совпали
+            }else{
+                if(number.indexOf(answer[i]) != -1){
+                    mas[1]++;//счетчик коров увеличиваем, т.к. элемент найден на другой позиции
+                }
+            }
+        }
+
+        if(mas[0] == 4){
+            mas[2] = true;
+        }
+        return mas;
+    }
+    
+
+  
+
+</script>

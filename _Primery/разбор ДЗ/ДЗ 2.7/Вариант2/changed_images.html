@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        #slider-container {
+            display: flex;
+           
+            justify-content: space-between;
+        }
+
+        #image {
+            align-items: center;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="slider-container">
+        <img id="image" src="images/image1.jpg" />
+
+    </div>
+
+    <script>
+        // Массив с URL изображений
+        const imagesUrls = [
+            "images/image1.jpeg",
+            "images/image2.jpeg",
+            "images/image3.jpeg",
+        ];
+
+        // индекс для отслеживания текущей картинки
+        let currentIndex = 0;
+
+        // Устанавливаем начальное изображение
+        const imageElement = document.querySelector("#image");
+        imageElement.src = imagesUrls[currentIndex];
+
+        // Функция, отвечающая за переход к следующему изображению
+        function nextImageHandler() {
+            // Увеличиваем индекс текущего изображения
+            currentIndex++;
+
+            // Если текущий индекс больше длины массива изображений, устанавливаем его обратно в 0
+            if (currentIndex >= imagesUrls.length) {
+                currentIndex = 0;
+            }
+
+            // Показываем следующее изображение
+            imageElement.src = imagesUrls[currentIndex];
+        }
+
+        setInterval('nextImageHandler()',1000);//по таймеру раз в секунду вызываем функцию 
+    </script>
+
+</body>
+
+</html>

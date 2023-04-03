@@ -1,0 +1,10 @@
+<script>
+    let flag = 1;
+    window.onload = function(){
+        setInterval(() =>{
+            document.img.src = `p${flag}.png`;
+            if (flag == 4) {flag = 0}else{flag++};
+        },3000)
+    }
+</script>
+<img name = 'img' src = 'p0.png' />
